@@ -1,0 +1,17 @@
+{
+  "name": "sheet-news-task",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node --env-file=.env read-sheet-example.js",
+    "read:sheet": "node --env-file=.env read-sheet-example.js"
+  },
+  "dependencies": {
+    "google-auth-library": "^10.0.0"
+  }
+}
