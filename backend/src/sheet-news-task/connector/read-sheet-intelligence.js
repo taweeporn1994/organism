@@ -1,5 +1,5 @@
-import { readSheet } from './utils/read-sheet.js'
-import DriveImageDownloader from './utils/DriveImageDownloader.js'
+import { readSheet } from '../utils/read-sheet.js'
+import DriveImageDownloader from '../utils/DriveImageDownloader.js'
 
 // Change this to the tab name at the bottom of your Google Sheet.
 const spreadsheetId = process.env.GOOGLE_SHEET_INTELLIGENCE_ID

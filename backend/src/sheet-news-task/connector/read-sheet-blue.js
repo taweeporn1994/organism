@@ -1,15 +1,15 @@
-import { readSheet } from './utils/read-sheet.js'
-import DriveImageDownloader from './utils/DriveImageDownloader.js'
+import { readSheet } from '../utils/read-sheet.js'
+import DriveImageDownloader from '../utils/DriveImageDownloader.js'
 
 // Change this to the tab name at the bottom of your Google Sheet.
-const spreadsheetId = process.env.GOOGLE_SHEET_KHMER_ID
-const sheet = 'ข่าวเขมร'
+const spreadsheetId = process.env.GOOGLE_SHEET_BLUE_ID
+const sheet = 'ข่าวการเมืองน้ำเงิน'
 
 const downloader = new DriveImageDownloader({
-  outputDir: './downloads/ข่าวเขมร',
+  outputDir: './downloads/blue',
 })
 
-const readSheetKhmer = async () => {
+const readSheetBlue = async () => {
   try {
     const data = await readSheet(spreadsheetId, sheet)
     const lastRow = data.pop()
@@ -22,4 +22,4 @@ const readSheetKhmer = async () => {
     process.exitCode = 1
   }
 }
-export { readSheetKhmer }
+export { readSheetBlue }
