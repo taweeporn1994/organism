@@ -13,10 +13,10 @@ const readSheetKhmer = async () => {
   try {
     const data = await readSheet(spreadsheetId, sheet)
     const lastRow = data.pop()
-    console.log(lastRow)
     const FILE_ID = lastRow[lastRow.length - 1]
     const image = await downloader.download(FILE_ID)
-    console.log(image.localPath)
+    const postText = `${lastRow[3]}\n${lastRow[4]}\n\n${lastRow[5]}`
+    return { postText, imagePath: image.localPath }
   } catch (error) {
     console.error(error.message)
     process.exitCode = 1
